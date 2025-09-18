@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Victor Hugo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='30' height='80' fill='%2300f0ff'/><rect x='60' y='10' width='30' height='80' fill='%2300f0ff'/><rect x='10' y='40' width='80' height='20' fill='%230b0e1c'/></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div id="tsparticules"></div>
+    <nav class="navbar">
+      <h1 class="logo">Victor <span>Hugo</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>STEP INTO MY WORLD</h2>
+      <p>Design ✦ Code ✦ Criatividade</p>
+      <a href="#about" class="btn">Explorar</a>
+    </div>
+  </header>
+
+  <!-- SOBRE -->
+  <section id="about" class="section about">
+    <h2>Sobre Mim</h2>
+    <div class="card-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuNAUq45r11Kilb12lSNRtqy4NI4VPbOlGw&s" alt="Victor Hugo" class="arcana">
+      <div class="about-text">
+        <p>Sou <span class="highlight">criativo</span>, com experiência em design e programação.<br> Crio ideias envolventes através de interfaces limpas e narrativas visuais.</p>
+        <p>Minha jornada começou com lógica e design, aprendendo a importância da estética e funcionalidade. Com o tempo, mergulhei no desenvolvimento, descobrindo a magia de transformar ideias em realidade com código.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projects" class="section projects">
+    <h2>Projetos</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <i class="fa-solid fa-heart"></i>
+        <h3>| Feliz Dia das Mães |</h3>
+        <a href="https://felizdiasdasmaessss.netlify.app/" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-flask"></i>
+        <h3>| Testando Estilos |</h3>
+        <a href="https://jujutsussj.netlify.app/" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-gamepad"></i>
+        <h3>| Projeto Alan Wake 2 |</h3>
+        <a href="https://alanwake2.netlify.app/" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-robot"></i>
+        <h3>| Chatbot Futurista | Mistral Experience</h3>
+        <a href="chat.html" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRÁFICO -->
+  <canvas id="languageChart"></canvas>
+
+  <!-- CONTATO -->
+  <section class="section contact" id="contact">
+    <h2>Contato</h2>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+      <input name="apiKey" value="sf_61iifn2lae0ie7ifhm95anl5" type="hidden">
+      <input type="text" placeholder="Nome" required name="nome" id="nome">
+      <input type="email" placeholder="Email" required name="orcamento" id="orcamento">
+      <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/portfolio/index.html">
+      <textarea placeholder="Sua Mensagem" required></textarea>
+      <button>Enviar</button>
+    </form>
+  </section>
+
+  <!-- APPS -->
+  <section id="apps" class="section apps">
+    <h2>Apps & Games</h2>
+    <div class="app-menu">
+      <button class="btn" onclick="showApp('velha')">Jogo da Velha</button>
+      <button class="btn" onclick="showApp('cep')">Buscar CEP</button>
+    </div>
+    <div id="appContainer">
+      <div id="app-velha" class="app-content">
+        <h3>Jogo da Velha</h3>
+        <div id="board" class="board"></div>
+        <p id="status"></p>
+        <button id="resetBtn" class="btn">Resetar Jogo</button>
+      </div>
+      <div id="app-cep" class="app-content">
+        <h3>Buscar CEP</h3>
+        <div class="form-cep">
+          <input type="text" id="cep" placeholder="Digite o CEP">
+          <button class="btn" onclick="BuscarCep()">Buscar CEP</button>
+          <br>
+          <input type="text" placeholder="Logradouro" id="logradouro" disabled>
+          <br>
+          <input type="text" placeholder="Bairro" id="bairro" disabled>
+          <br>
+          <input type="text" placeholder="Cidade" id="cidade" disabled>
+          <br>
+          <input type="text" placeholder="Estado" id="estado" disabled>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Quer ver mais? Acesse meu GitHub:</p>
+    <div class="social-icons">
+      <a href="https://github.com/Onichan286" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
